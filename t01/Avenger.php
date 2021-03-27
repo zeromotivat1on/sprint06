@@ -2,11 +2,11 @@
 
     class Avenger {
 
-        private $name;
-        private $alias;
-        private $gender;
-        private $age;
-        private $power = array();
+        public $name;
+        public $alias;
+        public $gender;
+        public $age;
+        public $power = array();
 
         public function __construct($name, $alias, $gender, $age, $power) {
 
