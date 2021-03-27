@@ -24,8 +24,8 @@
 
     class Team {
 
-        private $id;
-        private $avengers = array();
+        public $id;
+        public $avengers = array();
 
         public function __construct($id, $avengers) {
 
@@ -39,6 +39,23 @@
             for($i = 0; $i < count($this->avengers); $i++) {
 
                 $this->avengers[$i]->hp -= $damage;
+                
+            }
+
+            for($i = 0; $i < count($this->avengers); $i++) {
+
+                if($this->avengers[$i]->hp <= 0) {
+                    
+                    array_splice($this->avengers, $i, 1);
+                    $i = 0;
+                    
+                }
+
+            }
+
+            if($this->avengers[0]->hp <= 0) {
+
+                array_shift($this->avengers);
 
             }
 
@@ -46,17 +63,9 @@
 
         public function calculate_losses($cloned_team) {
 
-            $temp = 0;
             
-            for($i = 0; $i < count($this->avengers); $i++) {
-
-                if($this->avengers[$i]->hp <= 0) {
-
-                    $temp++;
-
-                }
-
-            }
+            $temp = count($cloned_team->avengers) - count($this->avengers);
+            //echo count($this->avengers)." this\n".count($cloned_team->avengers)." clone\n";
 
             if($temp == 0) {
 
@@ -93,5 +102,5 @@
     $team->battle($damage);
     $team->calculate_losses($cloned_team);
     */
-
+    
 ?>
