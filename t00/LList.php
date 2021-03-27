@@ -53,7 +53,7 @@
 
     }
 
-    class LList {
+    class LList implements IteratorAggregate {
 
         public $head;
 
