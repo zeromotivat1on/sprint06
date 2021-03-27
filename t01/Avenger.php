@@ -25,6 +25,7 @@
         }
 
         public function __invoke() {
+            
             $this->alias = strtoupper($this->alias);
 
             echo "$this->alias\n";
