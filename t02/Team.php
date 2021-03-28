@@ -65,7 +65,6 @@
 
             
             $temp = count($cloned_team->avengers) - count($this->avengers);
-            //echo count($this->avengers)." this\n".count($cloned_team->avengers)." clone\n";
 
             if($temp == 0) {
 
