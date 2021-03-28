@@ -26,6 +26,7 @@
             if(!$has) {
 
                 echo "Incorrect meal type!\n";
+                exit(0);
 
             }
 
