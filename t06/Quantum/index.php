@@ -16,7 +16,7 @@
     } 
 
     $time = calculate_time();
-    echo "\nIn quantum space you were absent for ". $time[0] . " years, ".$time[1] . " months, ". $time[2] . " days\n";
+    echo "<p>\nIn quantum space you were absent for ". $time[0] . " years, ".$time[1] . " months, ". $time[2] . " days\n</p>";
 
     ?>
 </body>

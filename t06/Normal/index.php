@@ -21,7 +21,7 @@
     }
 
     $time = calculate_time();
-    echo "In real life you were absent for ". $time->format("%Y") . " years, ".$time->format("%m") . " months, ". $time->format("%d") . " days\n";
+    echo "<p>In real life you were absent for ". $time->format("%Y") . " years, ".$time->format("%m") . " months, ". $time->format("%d") . " days\n</p>";
 
     ?>
 </body>
